@@ -17,8 +17,8 @@ clase-26-inicio-proyecto
 - [x] Modifiqué README.md.
 - [x] Creé index.html.
 - [x] Creé esta bitácora.
-- [ ] Hice commit.
-- [ ] Hice push.
+- [x] Hice commit.
+- [x] Hice push.
 
 ## Reflexión
 
