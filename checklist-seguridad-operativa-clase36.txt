@@ -1,0 +1,23 @@
+CHECKLIST DE SEGURIDAD OPERATIVA - CLASE 36
+Código abierto, soberanía tecnológica y primeros pasos en terminal
+
+Nombre del estudiante: Nicolás León
+Fecha: 05/06/2026
+
+[X] No compartí contraseñas.
+[X] No publiqué capturas con IP, usuarios, tokens, claves o rutas sensibles.
+[X] No ejecuté comandos que no entiendo.
+[X] Verifiqué mi ubicación con pwd antes de crear o mover archivos.
+[X] Revisé archivos y carpetas con ls antes de actuar.
+[X] Usé cp solo para copiar archivos de práctica.
+[X] Usé mv solo para mover o renombrar archivos de práctica.
+[X] Revisé procesos con top sin modificar ni finalizar procesos.
+[X] Revisé espacio en disco con df -h.
+[X] Revisé memoria con free -h.
+[X] No usé comandos de borrado.
+[X] No usé sudo.
+[X] No modifiqué configuraciones del servidor.
+[X] No finalicé procesos.
+[X] Registré los comandos principales en la bitácora.
+[X] Comprendí que un servidor puede contener información sensible.
+[X] Entiendo que la infraestructura debe manejarse con autorización y responsabilidad.

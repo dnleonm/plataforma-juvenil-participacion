@@ -1,0 +1,120 @@
+BITÁCORA DE TERMINAL - CLASE 36
+Código abierto, soberanía tecnológica y primeros pasos en terminal
+
+Nombre del estudiante: Nicolás León
+Fecha: 05/06/2026
+Clase: 36
+Entorno usado: Material de estudio y práctica guiada
+
+1. ¿Qué es un sistema operativo?
+   Respuesta:
+   Es el software principal que administra los recursos de un computador o servidor y permite que los programas funcionen correctamente.
+
+2. ¿Qué es el código abierto?
+   Respuesta:
+   Es un modelo de desarrollo en el que el código fuente puede ser consultado, estudiado, modificado y mejorado por la comunidad.
+
+3. ¿Qué significa soberanía tecnológica?
+   Respuesta:
+   Es la capacidad de una organización o comunidad para comprender, administrar y controlar su infraestructura tecnológica sin depender completamente de terceros.
+
+4. ¿Qué es Linux?
+   Respuesta:
+   Es una familia de sistemas operativos de código abierto ampliamente utilizada en servidores, computadores y dispositivos tecnológicos.
+
+5. ¿Qué es Debian?
+   Respuesta:
+   Es una distribución de Linux reconocida por su estabilidad, seguridad y enfoque comunitario.
+
+6. ¿Qué es un servidor?
+   Respuesta:
+   Es un equipo o sistema que proporciona servicios, aplicaciones o información a otros dispositivos conectados en una red.
+
+7. ¿Qué es una terminal?
+   Respuesta:
+   Es una interfaz de texto que permite interactuar con el sistema operativo mediante comandos.
+
+8. Comandos ejecutados y resultado observado:
+
+Comando: whoami
+Resultado: Permite conocer el usuario actual.
+
+Comando: hostname
+Resultado: Permite conocer el nombre del equipo o servidor.
+
+Comando: date
+Resultado: Muestra la fecha y hora del sistema.
+
+Comando: pwd
+Resultado: Muestra la ubicación actual dentro del sistema de archivos.
+
+Comando: ls
+Resultado: Lista los archivos y carpetas visibles.
+
+Comando: ls -la
+Resultado: Muestra archivos visibles y ocultos con información detallada.
+
+Comando: mkdir practica-linux
+Resultado: Crea una carpeta llamada practica-linux.
+
+Comando: cd practica-linux
+Resultado: Permite ingresar a la carpeta creada.
+
+Comando: touch notas.txt
+Resultado: Crea un archivo vacío llamado notas.txt.
+
+Comando: echo "Mi primera practica en terminal Debian" > notas.txt
+Resultado: Escribe contenido dentro del archivo.
+
+Comando: cat notas.txt
+Resultado: Muestra el contenido del archivo.
+
+Comando: cp notas.txt copia-notas.txt
+Resultado: Crea una copia del archivo.
+
+Comando: mv copia-notas.txt notas-renombradas.txt
+Resultado: Renombra el archivo copiado.
+
+Comando: mkdir respaldo
+Resultado: Crea una carpeta de respaldo.
+
+Comando: mv notas-renombradas.txt respaldo/
+Resultado: Mueve el archivo a la carpeta respaldo.
+
+Comando: df -h
+Resultado: Muestra el espacio disponible y utilizado en los discos.
+
+Comando: free -h
+Resultado: Muestra el uso de memoria RAM.
+
+Comando: uname -a
+Resultado: Muestra información general del sistema operativo.
+
+Comando: history
+Resultado: Muestra el historial de comandos ejecutados.
+
+Comando: ip a
+Resultado: Muestra información de red y direcciones IP.
+
+Comando: top
+Resultado: Permite observar procesos activos y consumo de recursos.
+
+9. ¿Qué comando me pareció más útil y por qué?
+   Respuesta:
+   pwd, porque permite saber exactamente en qué carpeta estoy trabajando antes de crear o mover archivos.
+
+10. ¿Qué aprendí sobre el uso responsable de la terminal?
+    Respuesta:
+    Aprendí que cada comando puede afectar archivos o configuraciones del sistema, por lo que es importante comprender su función antes de ejecutarlo.
+
+11. ¿Qué información no debo publicar en capturas o evidencias?
+    Respuesta:
+    No debo publicar direcciones IP, usuarios, contraseñas, tokens, claves, rutas internas ni información sensible del sistema.
+
+12. ¿Qué cuidados debo tener al trabajar en un servidor?
+    Respuesta:
+    Debo actuar con autorización, evitar modificar configuraciones sensibles, no borrar archivos importantes y proteger la información almacenada.
+
+13. ¿Cómo se relaciona la terminal con la soberanía tecnológica?
+    Respuesta:
+    La terminal permite comprender y administrar directamente la infraestructura tecnológica, fortaleciendo la autonomía y el conocimiento sobre los sistemas utilizados por una comunidad.
