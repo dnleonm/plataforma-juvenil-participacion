@@ -1,0 +1,45 @@
+BITÁCORA OPERATIVA - CLASE 39
+Logs, Git e IA responsable
+
+Nombre: Nicolás León Martínez
+Fecha: 17/06/2026
+Entorno: Visual Studio Code y Node.js
+
+1. ¿Qué es un log?
+   Respuesta: Es un registro que muestra eventos, mensajes o errores que ocurren durante la ejecución de una aplicación.
+
+2. ¿Por qué un log ayuda a diagnosticar?
+   Respuesta: Porque permite identificar qué ocurrió, cuándo ocurrió y dónde puede estar el problema.
+
+3. ¿Qué diferencia hay entre INFO, WARN y ERROR?
+   Respuesta: INFO informa eventos normales, WARN muestra advertencias y ERROR indica fallos o problemas importantes.
+
+4. ¿Qué log observé en la práctica?
+   Respuesta: Mensajes INFO, WARN y ERROR relacionados con la configuración de Telegram.
+
+5. ¿Qué significa el error observado?
+   Respuesta: Que no se encontraron las variables TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID en el entorno cuando no se cargó el archivo .env.
+
+6. ¿Qué información sensible no debo compartir en logs?
+   Respuesta: Tokens, contraseñas, claves, datos personales, IPs y credenciales.
+
+7. ¿Qué comando de Git usé para revisar cambios?
+   Respuesta: git status.
+
+8. ¿Qué mensaje de commit usé?
+   Respuesta: Clase 39 logs git e IA responsable.
+
+9. ¿Qué consulta segura hice a IA?
+   Respuesta: Consulté el significado de un error relacionado con TELEGRAM_BOT_TOKEN sin compartir el valor real del token.
+
+10. ¿Qué información oculté antes de consultar a IA?
+    Respuesta: Tokens, credenciales y datos sensibles.
+
+11. ¿Qué respondió la IA?
+    Respuesta: Explicó posibles causas del error y los pasos para verificar la configuración.
+
+12. ¿Cómo validé la respuesta?
+    Respuesta: Ejecutando nuevamente los archivos y comprobando el comportamiento esperado.
+
+13. ¿Qué aprendí sobre trazabilidad?
+    Respuesta: Que Git permite registrar cambios y mantener un historial claro del proyecto.
