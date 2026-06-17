@@ -1,0 +1,41 @@
+BITÁCORA DE PROCESOS Y TELEGRAM - CLASE 38
+
+Nombre: Nicolás León Martínez
+Fecha: 17/06/2026
+Entorno: Visual Studio Code y Node.js
+
+1. ¿Qué es un proceso?
+   Respuesta: Es un programa que se encuentra en ejecución dentro del sistema operativo.
+
+2. ¿Qué significa que un proceso esté corriendo?
+   Respuesta: Que el programa está activo y ejecutando tareas o esperando eventos.
+
+3. ¿Qué puede pasar si un proceso se detiene?
+   Respuesta: El servicio o funcionalidad que presta deja de estar disponible.
+
+4. ¿Qué comandos usé para observar procesos?
+   Respuesta: tasklist y Ctrl + C para detener procesos en Windows.
+
+5. ¿Qué es un bot de Telegram?
+   Respuesta: Es una aplicación automatizada que puede enviar y recibir mensajes dentro de Telegram.
+
+6. ¿Qué es un token?
+   Respuesta: Es una credencial que permite autenticar y controlar un bot.
+
+7. ¿Por qué el token no debe publicarse?
+   Respuesta: Porque otras personas podrían controlar el bot o utilizarlo de manera indebida.
+
+8. ¿Dónde se guardó el token?
+   Respuesta: En el archivo .env.
+
+9. ¿Por qué .env debe estar en .gitignore?
+   Respuesta: Para evitar que las credenciales se suban a GitHub.
+
+10. ¿Qué diferencia hay entre telegram-test.js y bot-observacion.js?
+    Respuesta: telegram-test.js envía un mensaje puntual y bot-observacion.js permanece activo escuchando mensajes.
+
+11. ¿Cómo puede servir Telegram a una comunidad digital?
+    Respuesta: Como canal de comunicación, notificaciones y acompañamiento comunitario.
+
+12. ¿Qué información no debería enviarse por un bot sin protocolo?
+    Respuesta: Datos personales, información sensible, datos de menores, información médica o denuncias reales.
