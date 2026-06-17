@@ -1,0 +1,48 @@
+BITÁCORA DE PRÁCTICA DE TERMINAL - SEMANA 8
+Clase 40 - Consolidación de evidencia
+
+Nombre: Nicolás León Martínez
+Fecha: 17/06/2026
+Entorno usado: Visual Studio Code, Node.js y PowerShell
+
+1. ¿Qué aprendí sobre el sistema operativo como base de una plataforma?
+   Respuesta: El sistema operativo permite administrar recursos, ejecutar programas y servir de base para las aplicaciones.
+
+2. ¿Qué comandos de terminal usé durante la semana?
+   Respuesta: cd, dir, mkdir, node, npm, git status, git add, git commit y git push.
+
+3. ¿Qué aprendí sobre usuarios, grupos y permisos?
+   Respuesta: Que permiten controlar quién puede acceder o modificar archivos y recursos.
+
+4. ¿Qué significa mínimo privilegio?
+   Respuesta: Dar únicamente los permisos necesarios para realizar una tarea.
+
+5. ¿Por qué un permiso como 777 puede ser riesgoso?
+   Respuesta: Porque permite acceso total a cualquier usuario y puede comprometer la seguridad.
+
+6. ¿Qué aprendí sobre procesos?
+   Respuesta: Que son programas en ejecución que mantienen servicios y funcionalidades activas.
+
+7. ¿Qué puede pasar si un proceso se detiene?
+   Respuesta: Que el servicio deja de funcionar o responder.
+
+8. ¿Qué aprendí sobre logs?
+   Respuesta: Que permiten registrar eventos, advertencias y errores.
+
+9. ¿Cómo ayudan los logs al diagnóstico?
+   Respuesta: Facilitan identificar problemas y comprender el comportamiento de una aplicación.
+
+10. ¿Qué aprendí sobre Git y trazabilidad?
+    Respuesta: Que Git registra cambios y permite conocer la evolución de un proyecto.
+
+11. ¿Qué aprendí sobre archivos .env y tokens?
+    Respuesta: Que almacenan credenciales sensibles y deben mantenerse protegidos.
+
+12. ¿Cómo puede servir Telegram a una comunidad digital?
+    Respuesta: Como canal de comunicación, notificaciones y acompañamiento.
+
+13. ¿Qué cuidados debo tener antes de integrar Telegram con Node.js o n8n?
+    Respuesta: Proteger credenciales, validar datos y evitar compartir información sensible.
+
+14. ¿Qué fue lo más importante de la Semana 8?
+    Respuesta: Comprender la importancia de la seguridad, la trazabilidad y la protección de credenciales.
