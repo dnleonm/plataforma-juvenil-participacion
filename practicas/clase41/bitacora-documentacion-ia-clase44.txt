@@ -1,0 +1,41 @@
+BITÁCORA DE DOCUMENTACIÓN E IA - CLASE 44
+
+Nombre: Nicolás León Martínez
+Fecha: 22/06/2026
+Entorno: Computador local (PowerShell y Visual Studio Code)
+
+1. ¿Qué es un procedimiento técnico?
+   Respuesta: Es un documento que describe paso a paso cómo instalar, ejecutar, verificar y mantener una aplicación o servicio.
+
+2. ¿Por qué documentar evita depender de una sola persona?
+   Respuesta: Porque cualquier integrante del equipo puede entender el funcionamiento del proyecto y continuar el trabajo siguiendo la documentación.
+
+3. ¿Qué diferencia hay entre Codespaces, hosting compartido, VPS y nube?
+   Respuesta: Codespaces es un entorno de desarrollo; el hosting compartido comparte recursos entre varios usuarios; un VPS ofrece recursos virtuales dedicados; y la nube permite escalar recursos según la necesidad.
+
+4. ¿Qué es cPanel?
+   Respuesta: Es una herramienta gráfica que facilita la administración de sitios web, dominios, correos y bases de datos.
+
+5. ¿Qué archivos no deben subirse al repositorio?
+   Respuesta: Archivos .env, credenciales, tokens, logs locales y archivos temporales.
+
+6. ¿Qué función cumple .gitignore?
+   Respuesta: Evita que Git rastree y publique archivos sensibles o temporales.
+
+7. ¿Qué función cumple .gitkeep?
+   Respuesta: Permite mantener carpetas vacías dentro del repositorio para conservar la estructura del proyecto.
+
+8. ¿Qué carpeta se preparó para archivos subidos?
+   Respuesta: uploads.
+
+9. ¿Por qué los archivos dentro de uploads no deben subirse automáticamente?
+   Respuesta: Porque pueden contener información temporal o archivos cargados por usuarios.
+
+10. ¿Qué consulta segura hice a IA?
+    Respuesta: Solicité ayuda para documentar el procedimiento técnico y configurar correctamente el archivo .gitignore.
+
+11. ¿Qué información evité compartir con IA?
+    Respuesta: Tokens, contraseñas, credenciales y contenido sensible del archivo .env.
+
+12. ¿Qué parte del procedimiento verifiqué manualmente?
+    Respuesta: La configuración de .gitignore, la creación de .gitkeep y la revisión de git status.

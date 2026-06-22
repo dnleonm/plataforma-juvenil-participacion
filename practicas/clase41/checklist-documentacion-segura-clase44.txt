@@ -1,0 +1,32 @@
+CHECKLIST DE DOCUMENTACIÓN SEGURA - CLASE 44
+
+Nombre: Nicolás León Martínez
+Fecha: 22/06/2026
+
+[X] Comprendí qué es un procedimiento técnico.
+[X] Comprendí por qué documentar evita dependencia de una sola persona.
+[X] Comprendí qué es un servidor.
+[X] Comprendí qué es hosting compartido.
+[X] Comprendí qué es cPanel.
+[X] Comprendí qué es un VPS.
+[X] Comprendí qué es un servidor dedicado.
+[X] Comprendí qué es la nube.
+[X] Comprendí que Codespaces es un entorno de práctica.
+[X] Creé PROCEDIMIENTO-DESPLIEGUE-CLASE44.md.
+[X] Documenté requisitos del entorno.
+[X] Documenté variables sin exponer secretos reales.
+[X] Documenté instalación de dependencias.
+[X] Documenté ejecución con npm start.
+[X] Documenté operación con PM2.
+[X] Documenté rutas de verificación.
+[X] Actualicé .gitignore.
+[X] Creé uploads/.gitkeep.
+[X] Creé logs/.gitkeep.
+[X] Creé tmp/.gitkeep.
+[X] Verifiqué que archivos de uploads no se suben.
+[X] Verifiqué que logs locales no se suben.
+[X] Verifiqué que archivos temporales no se suben.
+[X] Utilicé IA sin compartir credenciales.
+[X] Revisé manualmente la documentación generada.
+[X] Revisé git status antes del commit.
+[X] Preparé la evidencia para GitHub.
