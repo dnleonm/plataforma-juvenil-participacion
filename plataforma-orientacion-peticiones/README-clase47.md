@@ -1,26 +1,28 @@
-# Clase 47 - Derecho de petición y plantilla jurídica
+# Clase 47 - Plantilla de Derecho de Petición
 
 ## Objetivo
 
-Crear la base jurídica y comunicativa del generador de derechos de petición.
+Diseñar una plantilla inicial para la elaboración de derechos de petición con fines pedagógicos, aplicando buenas prácticas de organización documental, seguridad de la información y desarrollo de software.
 
-## Tarjeta ClickUp
+## Actividades realizadas
 
-HU-02 - Crear plantilla jurídica de derecho de petición.
+* Se creó la estructura documental del módulo.
+* Se elaboró una plantilla de derecho de petición.
+* Se diseñó un formulario HTML para capturar información.
+* Se creó una hoja de estilos CSS.
+* Se documentaron recomendaciones jurídicas y de seguridad.
+* Se preparó la documentación para futuras integraciones con IA.
 
-## Archivos creados
+## Archivos desarrollados
 
-- `docs/plantilla-derecho-peticion.md`
-- `docs/checklist-juridico-peticion.md`
-- `docs/prompt-seguro-deepseek.md`
-- `docs/advertencia-legal.md`
-- `docs/preparacion-google-docs-word.md`
-- `public/peticion.html`
+* docs/plantilla-derecho-peticion.md
+* docs/checklist-juridico-peticion.md
+* docs/prompt-seguro-deepseek.md
+* docs/advertencia-legal.md
+* docs/preparacion-google-docs-word.md
+* public/peticion.html
+* public/css/styles.css
 
-## Advertencia
+## Aprendizajes
 
-El sistema genera borradores editables. No reemplaza revisión jurídica. No se deben usar datos reales en clase.
-
-## Preparación futura
-
-En la Clase 54 se espera que el flujo pueda entregar un documento editable en Google Docs y, si es posible, exportable como Word `.docx`.
+La planificación jurídica y documental debe realizarse antes de automatizar procesos mediante inteligencia artificial, garantizando que la información utilizada sea clara, verificable y respetuosa de la normativa vigente.

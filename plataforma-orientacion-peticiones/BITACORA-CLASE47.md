@@ -1,46 +1,52 @@
-# Bitácora Clase 47
+# Bitácora - Clase 47
 
-## Datos
+**Nombre:** Nicolás León Martínez
 
-Nombre:
-Fecha:
-Clase: 47
-Rama GitHub: clase-47-derecho-peticion-plantilla
+**Fecha:** 25 de junio de 2026
 
-## Comunicaciones
+## Objetivo
 
-¿Qué tarjeta se trabajó en ClickUp?
+Preparar la documentación y la estructura base para un generador de derechos de petición con fines educativos.
 
-¿Qué historia de usuario representa?
+## Actividades realizadas
 
-¿Qué criterios de aceptación se revisaron?
+* Elaboración de la plantilla inicial.
+* Creación del formulario HTML.
+* Diseño de estilos CSS.
+* Documentación de recomendaciones jurídicas.
+* Elaboración del prompt seguro para herramientas de IA.
+* Organización del proyecto para las siguientes clases.
 
-¿Cómo se convierte una inconformidad en una solicitud respetuosa?
+## Resultados
 
-## Jurídico
+Se dejó preparada la base documental y visual del sistema, lista para comenzar la implementación funcional en las próximas clases.
 
-¿Qué es el derecho de petición?
+## Observaciones
 
-¿Qué relación tiene con acceso a información pública?
+Toda la información desarrollada corresponde a un ejercicio académico. No deben utilizarse datos personales reales ni documentos oficiales durante las prácticas.
+# Bitácora - Clase 47
 
-¿Qué límites tiene la plataforma?
+**Nombre:** Nicolás León Martínez
 
-¿Qué advertencia debe mostrar el sistema?
+**Fecha:** 25 de junio de 2026
 
-## Tecnología
+## Objetivo
 
-¿Qué archivos se crearon?
+Preparar la documentación y la estructura base para un generador de derechos de petición con fines educativos.
 
-¿Qué formulario se inició?
+## Actividades realizadas
 
-¿Cómo se prepara el proyecto para Google Docs o Word?
+* Elaboración de la plantilla inicial.
+* Creación del formulario HTML.
+* Diseño de estilos CSS.
+* Documentación de recomendaciones jurídicas.
+* Elaboración del prompt seguro para herramientas de IA.
+* Organización del proyecto para las siguientes clases.
 
-¿Qué ruta se probó?
+## Resultados
 
-## Evidencia
+Se dejó preparada la base documental y visual del sistema, lista para comenzar la implementación funcional en las próximas clases.
 
-Commit realizado:
+## Observaciones
 
-Estado final de la tarjeta ClickUp:
-
-Observaciones:
+Toda la información desarrollada corresponde a un ejercicio académico. No deben utilizarse datos personales reales ni documentos oficiales durante las prácticas.
