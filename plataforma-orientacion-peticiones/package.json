@@ -1,0 +1,11 @@
+{
+  "name": "plataforma-orientacion-peticiones",
+  "version": "1.0.0",
+  "description": "Proyecto del Módulo 5",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Nicolás León Martínez",
+  "license": "ISC"
+}
