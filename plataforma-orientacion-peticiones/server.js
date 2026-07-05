@@ -3,6 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const peticionesRoutes = require("./src/routes/peticiones.routes");
+const authRoutes = require("./src/routes/auth.routes");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/peticiones", peticionesRoutes);
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.redirect("/peticion.html");

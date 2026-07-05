@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Administrador de Práctica",
+    "usuario": "admin",
+    "password": "admin123",
+    "rol": "administrador"
+  },
+  {
+    "id": 2,
+    "nombre": "Revisor de Práctica",
+    "usuario": "revisor",
+    "password": "revisor123",
+    "rol": "revisor"
+  },
+  {
+    "id": 3,
+    "nombre": "Ciudadano de Práctica",
+    "usuario": "ciudadano",
+    "password": "ciudadano123",
+    "rol": "ciudadano"
+  }
+]
