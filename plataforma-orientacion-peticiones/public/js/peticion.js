@@ -1,3 +1,10 @@
+// ======================================================
+// Plataforma de Orientación y Peticiones Ciudadanas
+// Clase 54 - Versión 2.0
+// ======================================================
+
+// ---------- Obtención de datos ----------
+
 function obtenerDatosFormulario() {
   return {
     ciudad: document.getElementById("ciudad").value.trim(),
@@ -16,8 +23,11 @@ function obtenerDatosFormulario() {
   };
 }
 
+// ---------- Validaciones ----------
+
 function validarDatos(datos) {
-  const camposObligatorios = [
+
+  const campos = [
     "ciudad",
     "fecha",
     "entidad",
@@ -31,30 +41,80 @@ function validarDatos(datos) {
     "solicitud"
   ];
 
-  for (const campo of camposObligatorios) {
+  for (const campo of campos) {
     if (!datos[campo]) {
-      return `El campo ${campo} es obligatorio.`;
+      return `El campo "${campo}" es obligatorio.`;
     }
   }
 
   if (!datos.aceptaRevision) {
-    return "Debe aceptar que el documento es un borrador revisable.";
+    return "Debe aceptar que el documento corresponde a un borrador.";
   }
 
   return null;
 }
 
+// ---------- Orientación territorial ----------
+
+function mensajeAyudaTipo(tipo) {
+
+  const mensajes = {
+
+    derecho_peticion:
+      "El derecho de petición permite solicitar información, copias, actuaciones o respuestas a una entidad.",
+
+    informacion_publica:
+      "Solicite información pública que repose en poder de una entidad.",
+
+    copias:
+      "Permite solicitar copia de documentos o actuaciones administrativas.",
+
+    estado_tramite:
+      "Permite consultar el estado de una solicitud previamente presentada.",
+
+    orientacion_ruta:
+      "La plataforma brinda orientación inicial sobre la entidad que podría conocer el caso.",
+
+    querella_policiva:
+      "La querella policiva es diferente al derecho de petición y puede corresponder a asuntos de convivencia."
+
+  };
+
+  return mensajes[tipo] ||
+    "Seleccione un tipo de solicitud para recibir orientación.";
+}
+
+function actualizarAyudaTipoPeticion() {
+
+  const tipo = document.getElementById("tipoPeticion").value;
+
+  document.getElementById("ayudaTipoPeticion").textContent =
+    mensajeAyudaTipo(tipo);
+
+}
+
+// ---------- Documento local ----------
+
 function generarBorradorLocal(datos) {
+
   return `${datos.ciudad}, ${datos.fecha}
 
 Señores
 ${datos.entidad}
 
-Asunto: Derecho de petición - ${datos.asunto}
+Asunto:
+${datos.asunto}
 
-Yo, ${datos.nombre}, identificado(a) con ${datos.tipoDocumento} No. ${datos.documento}, actuando en ejercicio del derecho fundamental de petición, respetuosamente presento la siguiente solicitud.
+Tipo de solicitud:
+${datos.tipoPeticion}
 
-1. Hechos o contexto
+Yo, ${datos.nombre},
+identificado(a) con ${datos.tipoDocumento}
+No. ${datos.documento},
+
+presento respetuosamente la siguiente solicitud.
+
+1. Hechos
 
 ${datos.hechos}
 
@@ -62,31 +122,35 @@ ${datos.hechos}
 
 ${datos.solicitud}
 
-3. Finalidad
-
-La presente solicitud se formula con fines de participación ciudadana, transparencia, control social o acceso a información pública, según corresponda al caso.
-
-4. Medio de notificación
-
-Agradezco remitir la respuesta al siguiente correo electrónico:
+3. Medio de notificación
 
 ${datos.correo}
 
-5. Anexos
+4. Anexos
 
 ${datos.anexos || "No se indican anexos."}
 
-Atentamente,
+--------------------------------------------------
 
-${datos.nombre}
-${datos.tipoDocumento} ${datos.documento}
-${datos.correo}
+ADVERTENCIA
 
-Advertencia: Este documento es un borrador editable de apoyo pedagógico y debe ser revisado antes de radicarse.`;
+Este documento corresponde a un borrador editable.
+
+Debe revisarse antes de presentarse
+ante cualquier entidad pública.
+
+La plataforma orienta,
+pero no reemplaza asesoría jurídica.
+`;
+
 }
 
+// ---------- Vista previa ----------
+
 function mostrarVistaPrevia() {
+
   const datos = obtenerDatosFormulario();
+
   const error = validarDatos(datos);
 
   if (error) {
@@ -94,72 +158,153 @@ function mostrarVistaPrevia() {
     return;
   }
 
-  const borrador = generarBorradorLocal(datos);
-  document.getElementById("vistaPrevia").textContent = borrador;
+  document.getElementById("vistaPrevia").textContent =
+    generarBorradorLocal(datos);
+
 }
 
-async function copiarBorrador() {
-  const texto = document.getElementById("vistaPrevia").textContent;
+// ---------- Copiar ----------
 
-  if (!texto || texto.includes("Complete el formulario")) {
+async function copiarBorrador() {
+
+  const texto =
+    document.getElementById("vistaPrevia").textContent;
+
+  if (!texto || texto.includes("Complete")) {
+
     alert("Primero genere la vista previa.");
+
     return;
+
   }
 
   await navigator.clipboard.writeText(texto);
-  alert("Borrador copiado al portapapeles.");
+
+  alert("Borrador copiado correctamente.");
+
 }
 
+// ---------- Backend ----------
+
 async function enviarAlBackend(event) {
+
   event.preventDefault();
 
   const datos = obtenerDatosFormulario();
+
   const error = validarDatos(datos);
 
   if (error) {
+
     alert(error);
+
     return;
+
   }
 
-  const resultado = document.getElementById("resultadoBackend");
-  resultado.textContent = "Enviando solicitud al backend...";
+  const resultado =
+    document.getElementById("resultadoBackend");
+
+  resultado.innerHTML =
+    "<p>Enviando solicitud...</p>";
 
   try {
-    const response = await fetch("/api/peticiones/generar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(datos)
-    });
 
-    const data = await response.json();
+    const respuesta = await fetch(
+      "/api/peticiones/generar",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(datos)
+      }
+    );
 
-    if (!response.ok) {
-      resultado.textContent = data.mensaje || "Ocurrió un error al generar la petición.";
+    const data = await respuesta.json();
+
+    if (!respuesta.ok) {
+
+      resultado.innerHTML =
+        `<p>${data.mensaje}</p>`;
+
       return;
+
     }
 
     resultado.innerHTML = `
-      <p><strong>Respuesta:</strong> ${data.mensaje}</p>
-      <p><strong>Modo:</strong> ${data.modo}</p>
+      <p><strong>${data.mensaje}</strong></p>
+
+      <p>
+      Estado:
+      ${data.estado}
+      </p>
+
+      <p>
+      Modo:
+      ${data.modo}
+      </p>
+
+      ${
+        data.documentoEditable
+          ? `<p>Documento editable preparado correctamente (modo ${data.documentoEditable.modo}).</p>`
+          : ""
+      }
+
       ${
         data.linkDocumento
-          ? `<p><a href="${data.linkDocumento}" target="_blank">Abrir documento generado</a></p>`
-          : "<p>Documento editable pendiente para la integración con n8n y Google Docs.</p>"
+          ? `<p><a href="${data.linkDocumento}" target="_blank">Abrir documento</a></p>`
+          : "<p>Google Docs aún funciona en modo mock.</p>"
       }
+
     `;
+
   } catch (error) {
-    resultado.textContent = "No fue posible conectar con el backend.";
+
     console.error(error);
+
+    resultado.innerHTML =
+      "<p>No fue posible conectar con el servidor.</p>";
+
   }
+
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const fecha = document.getElementById("fecha");
-  fecha.value = new Date().toISOString().split("T")[0];
+// ---------- Inicialización ----------
 
-  document.getElementById("btnVistaPrevia").addEventListener("click", mostrarVistaPrevia);
-  document.getElementById("btnCopiar").addEventListener("click", copiarBorrador);
-  document.getElementById("formPeticion").addEventListener("submit", enviarAlBackend);
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.getElementById("fecha").value =
+    new Date().toISOString().split("T")[0];
+
+  document
+    .getElementById("tipoPeticion")
+    .addEventListener(
+      "change",
+      actualizarAyudaTipoPeticion
+    );
+
+  document
+    .getElementById("btnVistaPrevia")
+    .addEventListener(
+      "click",
+      mostrarVistaPrevia
+    );
+
+  document
+    .getElementById("btnCopiar")
+    .addEventListener(
+      "click",
+      copiarBorrador
+    );
+
+  document
+    .getElementById("formPeticion")
+    .addEventListener(
+      "submit",
+      enviarAlBackend
+    );
+
+  actualizarAyudaTipoPeticion();
+
 });

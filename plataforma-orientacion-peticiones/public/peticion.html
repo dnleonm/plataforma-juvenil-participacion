@@ -4,96 +4,286 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generador de Derecho de Petición</title>
+
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
+
 <body>
-  <main>
-    <h1>Generador de Derecho de Petición</h1>
 
-    <p class="aviso">
-      Este sistema genera un borrador editable de apoyo pedagógico.
-      Debe ser revisado antes de presentarse ante cualquier autoridad.
-    </p>
+<main>
 
-    <p class="aviso">
-      En clase use datos simulados. No incluya documentos reales, datos sensibles ni acusaciones sin soporte.
-    </p>
+<h1>Generador de Derecho de Petición</h1>
 
-    <section>
-      <h2>Formulario de solicitud</h2>
+<p class="aviso">
+Este sistema genera un borrador editable de apoyo pedagógico.
+Debe ser revisado antes de presentarse ante cualquier autoridad.
+</p>
 
-      <form id="formPeticion">
-        <label for="ciudad">Ciudad</label>
-        <input id="ciudad" name="ciudad" type="text" value="Bogotá D.C." required />
+<p class="aviso">
+En clase utilice únicamente datos simulados.
+No incluya documentos reales, datos sensibles ni acusaciones sin soporte.
+</p>
 
-        <label for="fecha">Fecha</label>
-        <input id="fecha" name="fecha" type="date" required />
+<section>
 
-        <label for="entidad">Entidad destinataria</label>
-        <input id="entidad" name="entidad" type="text" placeholder="Ejemplo: Secretaría de..." required />
+<h2>Formulario de solicitud</h2>
 
-        <label for="nombre">Nombre del solicitante</label>
-        <input id="nombre" name="nombre" type="text" placeholder="Ejemplo: Ciudadano de práctica" required />
+<form id="formPeticion">
 
-        <label for="tipoDocumento">Tipo de documento</label>
-        <select id="tipoDocumento" name="tipoDocumento" required>
-          <option value="">Seleccione</option>
-          <option value="CC">Cédula de ciudadanía</option>
-          <option value="TI">Tarjeta de identidad</option>
-          <option value="CE">Cédula de extranjería</option>
-          <option value="PAS">Pasaporte</option>
-          <option value="PRACTICA">Documento de práctica</option>
-        </select>
+<label for="ciudad">Ciudad</label>
+<input
+id="ciudad"
+name="ciudad"
+type="text"
+value="Bogotá D.C."
+required
+/>
 
-        <label for="documento">Número de documento</label>
-        <input id="documento" name="documento" type="text" placeholder="En clase usar 0000000000" required />
+<label for="fecha">Fecha</label>
+<input
+id="fecha"
+name="fecha"
+type="date"
+required
+/>
 
-        <label for="correo">Correo para recibir respuesta</label>
-        <input id="correo" name="correo" type="email" placeholder="correo_prueba@example.com" required />
+<label for="entidad">Entidad destinataria</label>
+<input
+id="entidad"
+name="entidad"
+type="text"
+placeholder="Ejemplo: Secretaría de..."
+required
+/>
 
-        <label for="tipoPeticion">Tipo de petición</label>
-        <select id="tipoPeticion" name="tipoPeticion" required>
-          <option value="">Seleccione</option>
-          <option value="informacion_publica">Solicitud de información pública</option>
-          <option value="copias">Solicitud de copias</option>
-          <option value="estado_tramite">Solicitud de estado de trámite</option>
-          <option value="orientacion_ruta">Orientación sobre ruta institucional</option>
-        </select>
+<label for="nombre">Nombre del solicitante</label>
+<input
+id="nombre"
+name="nombre"
+type="text"
+placeholder="Ciudadano de práctica"
+required
+/>
 
-        <label for="asunto">Asunto</label>
-        <input id="asunto" name="asunto" type="text" placeholder="Ejemplo: Solicitud de información pública" required />
+<label for="tipoDocumento">Tipo de documento</label>
 
-        <label for="hechos">Hechos o contexto</label>
-        <textarea id="hechos" name="hechos" rows="6" placeholder="Describa el contexto de forma clara y respetuosa" required></textarea>
+<select
+id="tipoDocumento"
+name="tipoDocumento"
+required>
 
-        <label for="solicitud">Solicitud concreta</label>
-        <textarea id="solicitud" name="solicitud" rows="6" placeholder="Indique qué información, copia o respuesta solicita" required></textarea>
+<option value="">Seleccione</option>
+<option value="CC">Cédula de ciudadanía</option>
+<option value="TI">Tarjeta de identidad</option>
+<option value="CE">Cédula de extranjería</option>
+<option value="PAS">Pasaporte</option>
+<option value="PRACTICA">Documento de práctica</option>
 
-        <label for="anexos">Anexos</label>
-        <textarea id="anexos" name="anexos" rows="3" placeholder="Indique si existen anexos. En clase no use documentos reales."></textarea>
+</select>
 
-        <label class="checkbox">
-          <input type="checkbox" id="aceptaRevision" required />
-          Entiendo que este sistema genera un borrador que debe ser revisado antes de radicarse.
-        </label>
+<label for="documento">Número de documento</label>
 
-        <button type="button" id="btnVistaPrevia">Generar vista previa local</button>
-        <button type="button" id="btnCopiar">Copiar borrador</button>
-        <button type="submit">Enviar al backend</button>
-      </form>
-    </section>
+<input
+id="documento"
+name="documento"
+type="text"
+placeholder="0000000000"
+required
+/>
 
-    <section>
-      <h2>Vista previa del borrador</h2>
-      <pre id="vistaPrevia">Complete el formulario y haga clic en “Generar vista previa local”.</pre>
-    </section>
+<label for="correo">Correo electrónico</label>
 
-    <section>
-      <h2>Resultado del backend</h2>
-      <div id="resultadoBackend">Aún no se ha enviado al backend.</div>
-    </section>
-  </main>
+<input
+id="correo"
+name="correo"
+type="email"
+placeholder="correo_prueba@example.com"
+required
+/>
 
-  <script src="/js/peticion.js"></script>
+<label for="tipoPeticion">
+
+Tipo de solicitud o ruta
+
+</label>
+
+<select
+id="tipoPeticion"
+name="tipoPeticion"
+required>
+
+<option value="">Seleccione</option>
+
+<option value="derecho_peticion">
+Derecho de petición general
+</option>
+
+<option value="informacion_publica">
+Solicitud de información pública
+</option>
+
+<option value="copias">
+Solicitud de copias
+</option>
+
+<option value="estado_tramite">
+Solicitud de estado de trámite
+</option>
+
+<option value="orientacion_ruta">
+Orientación sobre ruta institucional
+</option>
+
+<option value="querella_policiva">
+Orientación para posible querella policiva
+</option>
+
+</select>
+
+<div
+id="ayudaTipoPeticion"
+class="aviso">
+
+Seleccione un tipo de solicitud para ver una orientación inicial.
+
+</div>
+
+<label for="asunto">Asunto</label>
+
+<input
+id="asunto"
+name="asunto"
+type="text"
+required
+/>
+
+<section class="aviso">
+
+<h3>Recomendación</h3>
+
+<p>
+
+Escriba los hechos de forma clara,
+respetuosa y verificable.
+
+No incluya acusaciones sin soporte
+ni datos sensibles innecesarios.
+
+</p>
+
+</section>
+
+<label for="hechos">
+
+Hechos o contexto
+
+</label>
+
+<textarea
+id="hechos"
+name="hechos"
+rows="6"
+required></textarea>
+
+<label for="solicitud">
+
+Solicitud concreta
+
+</label>
+
+<textarea
+id="solicitud"
+name="solicitud"
+rows="6"
+required></textarea>
+
+<label for="anexos">
+
+Anexos
+
+</label>
+
+<textarea
+id="anexos"
+name="anexos"
+rows="3"></textarea>
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+id="aceptaRevision"
+required
+/>
+
+Entiendo que este sistema genera un borrador editable
+que debe revisarse antes de radicarse.
+
+</label>
+
+<button
+type="button"
+id="btnVistaPrevia">
+
+Generar vista previa local
+
+</button>
+
+<button
+type="button"
+id="btnCopiar">
+
+Copiar borrador
+
+</button>
+
+<button
+type="submit">
+
+Enviar al backend
+
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>
+
+Vista previa del borrador
+
+</h2>
+
+<pre id="vistaPrevia">
+
+Complete el formulario y genere la vista previa.
+
+</pre>
+
+</section>
+
+<section>
+
+<h2>
+
+Resultado del backend
+
+</h2>
+
+<div id="resultadoBackend">
+
+Aún no se ha enviado al backend.
+
+</div>
+
+</section>
+
+</main>
+
+<script src="/js/peticion.js"></script>
+
 </body>
+
 </html>

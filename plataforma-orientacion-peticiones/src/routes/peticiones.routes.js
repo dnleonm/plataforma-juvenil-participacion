@@ -1,5 +1,7 @@
 const express = require("express");
+
 const { enviarPeticionAN8n } = require("../services/n8n.service");
+const { prepararDocumentoEditable } = require("../services/documento.service");
 
 const router = express.Router();
 
@@ -29,7 +31,9 @@ function validarPeticion(datos) {
 
 router.post("/generar", async (req, res) => {
   try {
+
     const datos = req.body;
+
     const error = validarPeticion(datos);
 
     if (error) {
@@ -39,10 +43,14 @@ router.post("/generar", async (req, res) => {
       });
     }
 
+    // Preparar documento editable (modo mock)
+    const documentoEditable = await prepararDocumentoEditable(datos);
+
+    // Enviar información a n8n
     const resultadoN8n = await enviarPeticionAN8n({
       ...datos,
       origen: "nodejs",
-      clase: 48,
+      clase: 54,
       modulo: 5,
       fechaRecepcion: new Date().toISOString()
     });
@@ -52,15 +60,22 @@ router.post("/generar", async (req, res) => {
       mensaje: "Solicitud recibida correctamente.",
       modo: resultadoN8n.modo || "n8n",
       estado: resultadoN8n.estado || "recibida",
-      linkDocumento: resultadoN8n.linkDocumento || null
+      linkDocumento:
+        resultadoN8n.linkDocumento ||
+        documentoEditable.linkGoogleDoc ||
+        null,
+      documentoEditable
     });
+
   } catch (error) {
+
     console.error("Error al generar petición:", error.message);
 
     return res.status(500).json({
       ok: false,
       mensaje: "No fue posible generar la petición en este momento."
     });
+
   }
 });
 
